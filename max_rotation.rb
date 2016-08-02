@@ -19,7 +19,6 @@
 # https://en.wikipedia.org/wiki/Bitwise_operation#Rotate_no_carry
 
 def max_rot(n)
-  prev = 0
   result = n
   n = n.to_s.chars
   len = n.length
@@ -30,10 +29,11 @@ def max_rot(n)
     if temp > result
       result = temp
     elsif i == len
+      puts result
       return result
     end
   end
 end
 
-max_rot(38458215)
-      # 85821534
+max_rot(38_458_215)
+# 85821534
