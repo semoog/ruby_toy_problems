@@ -4,7 +4,8 @@
 #
 # Keep the first two digits in place and rotate the other ones: 68579.
 #
-# Keep the first three digits and rotate left the rest: 68597. Now it is over since keeping the first four it remains only one digit which rotated is itself.
+# Keep the first three digits and rotate left the rest: 68597.
+# Now it is over since keeping the first four it remains only one digit which rotated is itself.
 #
 # You have the following sequence of numbers:
 #
@@ -21,8 +22,8 @@
 def max_rot(n)
   result = n
   n = n.to_s.chars
-  len = n.length
-  for i in 0..len
+  len = n.length - 1
+  n.each.with_index do |_value, i|
     n.push(n[i])
     n.delete_at(i)
     temp = n.join('').to_i

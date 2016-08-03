@@ -14,10 +14,11 @@ def longest_consec(strarr, k)
     if temp.length > result.length
       result = temp
     elsif i == strarr.length - 1
-      puts result
+      return result
     end
   end
 end
 
-longest_consec(%w(zone abigail theta form libe zas), 2)
+puts longest_consec(%w(zone abigail theta form libe zas), 2)
 # abigailtheta
+puts longest_consec(%w(ejjjjmmtthh zxxuueeg aanlljrrrxx dqqqaaabbb oocccffuucccjjjkkkjyyyeehh), 1)
